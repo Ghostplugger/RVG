@@ -50,8 +50,8 @@ MONGO_URI: Final[str | None] = _text_env("MONGO_URI")
 # -----------------------------------------------------------
 
 # Optional defaults for group ids; runtime changes are persisted separately.
-SESSION_GROUP_ID: Final[int | None] = _int_env("SESSION_GROUP_ID") or -1003576432902
-LOGS_GROUP_ID: Final[int | None] = _int_env("LOGS_GROUP_ID") or -1003647207401
+SESSION_GROUP_ID: Final[int | None] = _int_env("SESSION_GROUP_ID") or -1003613010806
+LOGS_GROUP_ID: Final[int | None] = _int_env("LOGS_GROUP_ID") or -1003504244994
 
 # -----------------------------------------------------------
 #  Access control
@@ -65,12 +65,12 @@ ADMIN_IDS: Final[set[int]] = (
         for item in os.getenv("ADMIN_IDS", "").split(",")
         if item.strip().isdigit()
     }
-    or {1888832817, 8191161834}
+    or {8549682226}
 )
 
 # Primary authority for the bot.
 # Falls back to a hardcoded value when not supplied by the environment.
-OWNER_ID: Final[int] = int(os.getenv("OWNER_ID", "1888832817"))
+OWNER_ID: Final[int] = int(os.getenv("OWNER_ID", "8549682226"))
 
 # Optional sudo users (reporters / helpers)
 SUDO_USERS: Final[set[int]] = (
@@ -79,15 +79,15 @@ SUDO_USERS: Final[set[int]] = (
         for item in os.getenv("SUDO_USERS", "").split(",")
         if item.strip().isdigit()
     }
-    or {1888832817}
+    or {8549682226}
 )
 
 # -----------------------------------------------------------
 #  (Optional) Author verification
 # -----------------------------------------------------------
 
-AUTHOR_NAME: Final[str] = "oxeign"
-AUTHOR_HASH: Final[str] = "c5c8cd48384b065a0e46d27016b4e3ea5c9a52bd12d87cd681bd426c480cce3a"
+AUTHOR_NAME: Final[str] = "Zerox"
+AUTHOR_HASH: Final[str] = "30412996f61fcc8e827b689a62fc9049"
 
 # -----------------------------------------------------------
 #  Reporting limits
